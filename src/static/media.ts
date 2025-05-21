@@ -1,5 +1,137 @@
 export const mediaData = [
   {
+    "id": 10,
+    "alt": "Illinois",
+    "updatedAt": "2025-05-21T07:04:18.042Z",
+    "createdAt": "2025-05-21T07:04:18.042Z",
+    "url": "/api/media/file/illinois_logo.png",
+    "thumbnailURL": "/api/media/file/illinois_logo-400x300.png",
+    "filename": "illinois_logo.png",
+    "mimeType": "image/png",
+    "filesize": 2143,
+    "width": 284,
+    "height": 350,
+    "focalX": 50,
+    "focalY": 50,
+    "sizes": {
+      "thumbnail": {
+        "url": "/api/media/file/illinois_logo-400x300.png",
+        "width": 400,
+        "height": 300,
+        "mimeType": "image/png",
+        "filesize": 5733,
+        "filename": "illinois_logo-400x300.png"
+      },
+      "medium": {
+        "url": null,
+        "width": null,
+        "height": null,
+        "mimeType": null,
+        "filesize": null,
+        "filename": null
+      }
+    }
+  },
+  {
+    "id": 9,
+    "alt": "HTRC",
+    "updatedAt": "2025-05-21T07:03:31.180Z",
+    "createdAt": "2025-05-21T07:03:31.180Z",
+    "url": "/api/media/file/htrc_logo.png",
+    "thumbnailURL": "/api/media/file/htrc_logo-400x300.png",
+    "filename": "htrc_logo.png",
+    "mimeType": "image/png",
+    "filesize": 15330,
+    "width": 1200,
+    "height": 312,
+    "focalX": 50,
+    "focalY": 50,
+    "sizes": {
+      "thumbnail": {
+        "url": "/api/media/file/htrc_logo-400x300.png",
+        "width": 400,
+        "height": 300,
+        "mimeType": "image/png",
+        "filesize": 12036,
+        "filename": "htrc_logo-400x300.png"
+      },
+      "medium": {
+        "url": "/api/media/file/htrc_logo-800x600.png",
+        "width": 800,
+        "height": 600,
+        "mimeType": "image/png",
+        "filesize": 31414,
+        "filename": "htrc_logo-800x600.png"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "alt": "Indiana",
+    "updatedAt": "2025-05-21T07:03:07.386Z",
+    "createdAt": "2025-05-21T07:03:07.386Z",
+    "url": "/api/media/file/indiana_logo.png",
+    "thumbnailURL": "/api/media/file/indiana_logo-400x300.png",
+    "filename": "indiana_logo.png",
+    "mimeType": "image/png",
+    "filesize": 10884,
+    "width": 1280,
+    "height": 1617,
+    "focalX": 50,
+    "focalY": 50,
+    "sizes": {
+      "thumbnail": {
+        "url": "/api/media/file/indiana_logo-400x300.png",
+        "width": 400,
+        "height": 300,
+        "mimeType": "image/png",
+        "filesize": 6141,
+        "filename": "indiana_logo-400x300.png"
+      },
+      "medium": {
+        "url": "/api/media/file/indiana_logo-800x600.png",
+        "width": 800,
+        "height": 600,
+        "mimeType": "image/png",
+        "filesize": 17826,
+        "filename": "indiana_logo-800x600.png"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "alt": "IMLS",
+    "updatedAt": "2025-05-21T07:02:36.538Z",
+    "createdAt": "2025-05-21T07:02:36.538Z",
+    "url": "/api/media/file/imls_logo.png",
+    "thumbnailURL": "/api/media/file/imls_logo-400x300.png",
+    "filename": "imls_logo.png",
+    "mimeType": "image/png",
+    "filesize": 368398,
+    "width": 2928,
+    "height": 1332,
+    "focalX": 50,
+    "focalY": 50,
+    "sizes": {
+      "thumbnail": {
+        "url": "/api/media/file/imls_logo-400x300.png",
+        "width": 400,
+        "height": 300,
+        "mimeType": "image/png",
+        "filesize": 20297,
+        "filename": "imls_logo-400x300.png"
+      },
+      "medium": {
+        "url": "/api/media/file/imls_logo-800x600.png",
+        "width": 800,
+        "height": 600,
+        "mimeType": "image/png",
+        "filesize": 49218,
+        "filename": "imls_logo-800x600.png"
+      }
+    }
+  },
+  {
     "id": 6,
     "alt": null,
     "updatedAt": "2025-05-21T06:56:54.027Z",

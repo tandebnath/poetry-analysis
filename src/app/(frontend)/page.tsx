@@ -16,6 +16,13 @@ const cardBorder = '#F2EAE2'
 const textColor = '#2f2f2f'
 const secondaryTextColor = '#7f7f7f'
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
+const transformImageUrl = (url: string | null | undefined) => {
+  if (!url) return null
+  return url.startsWith('/api/media/file/') ? url.replace('/api/media/file/', '/uploads/') : url
+}
+
 const Home = () => {
   const homeEntry = homeData[0]
   const homeTitle = homeEntry?.title || 'Unbiased AI for Poetry Analysis'
@@ -38,6 +45,14 @@ const Home = () => {
       ...post,
       shortDescription: post.shortDescription ? richTextToHtml(post.shortDescription as any) : '',
       readTime: post.readTime ? `${post.readTime} min read` : '',
+    }))
+
+  const supporters = (homeEntry?.supporters || [])
+    .slice()
+    .sort((a: any, b: any) => (a.sortOrder || 999) - (b.sortOrder || 999))
+    .map((supporter: any) => ({
+      logoUrl: supporter.logo?.url ? transformImageUrl(supporter.logo.url) : null,
+      website: supporter.website || '#',
     }))
 
   const fadeInVariants = {
@@ -138,39 +153,25 @@ const Home = () => {
       </motion.div>
 
       {/* Acknowledgment Section with Logos */}
-      <motion.section className="mx-auto text-center mt-6" variants={fadeInVariants}>
-        <p className="text-sm text-[#7f7f7f] mb-3">With support from:</p>
-        <div className="flex justify-center items-center gap-16">
-          <a href="https://www.imls.gov/" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/images/imls_logo.png"
-              alt="IMLS Logo"
-              className="h-12 sm:h-14 object-contain"
-            />
-          </a>
-          <a href="https://www.indiana.edu/" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/images/indiana_logo.png"
-              alt="Indiana University Logo"
-              className="h-10 sm:h-12 object-contain"
-            />
-          </a>
-          <a href="https://www.hathitrust.org/htrc" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/images/htrc_logo.png"
-              alt="HTRC Logo"
-              className="h-10 sm:h-12 object-contain"
-            />
-          </a>
-          <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/images/illinois_logo.png"
-              alt="Illinois Logo"
-              className="h-10 sm:h-12 object-contain"
-            />
-          </a>
-        </div>
-      </motion.section>
+      {supporters.length > 0 && (
+        <motion.section className="mx-auto text-center mt-6" variants={fadeInVariants}>
+          <p className="text-sm text-[#7f7f7f] mb-3">With support from:</p>
+          <div className="flex justify-center items-center gap-16 flex-wrap">
+            {supporters.map(
+              (s, idx) =>
+                s.logoUrl && (
+                  <a key={idx} href={s.website} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={`${BASE_PATH}${s.logoUrl}`}
+                      alt={`Supporter ${idx}`}
+                      className="h-12 sm:h-14 object-contain"
+                    />
+                  </a>
+                ),
+            )}
+          </div>
+        </motion.section>
+      )}
     </motion.div>
   )
 }

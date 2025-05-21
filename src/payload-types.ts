@@ -330,6 +330,27 @@ export interface Home {
    * Set the number of latest updates to display on the homepage.
    */
   maxUpdates: number;
+  /**
+   * Logos and names of sponsoring/supporting organizations.
+   */
+  supporters?:
+    | {
+        name: string;
+        /**
+         * Logo image for the supporter.
+         */
+        logo: number | Media;
+        /**
+         * Website link for the supporter.
+         */
+        website?: string | null;
+        /**
+         * Controls the display order of supporters (lower = earlier).
+         */
+        sortOrder?: number | null;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -622,6 +643,15 @@ export interface HomeSelect<T extends boolean = true> {
   title?: T;
   content?: T;
   maxUpdates?: T;
+  supporters?:
+    | T
+    | {
+        name?: T;
+        logo?: T;
+        website?: T;
+        sortOrder?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }

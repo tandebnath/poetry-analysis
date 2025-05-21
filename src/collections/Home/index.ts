@@ -55,5 +55,48 @@ export const Home: CollectionConfig = {
         description: 'Set the number of latest updates to display on the homepage.',
       },
     },
+    {
+      name: 'supporters',
+      type: 'array',
+      label: 'Supporters',
+      required: false,
+      admin: {
+        description: 'Logos and names of sponsoring/supporting organizations.',
+      },
+      fields: [
+        {
+          name: 'name',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'logo',
+          type: 'upload',
+          relationTo: 'media',
+          required: true,
+          admin: {
+            description: 'Logo image for the supporter.',
+          },
+        },
+        {
+          name: 'website',
+          type: 'text',
+          required: false,
+          defaultValue: '#',
+          admin: {
+            description: 'Website link for the supporter.',
+          },
+        },
+        {
+          name: 'sortOrder',
+          type: 'number',
+          required: false,
+          defaultValue: 999,
+          admin: {
+            description: 'Controls the display order of supporters (lower = earlier).',
+          },
+        },
+      ],
+    },
   ],
 }
