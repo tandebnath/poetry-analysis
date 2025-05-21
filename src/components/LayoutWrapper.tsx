@@ -61,6 +61,9 @@ const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children }) => {
   const siteData = websiteSettingsData[0]
   const logoUrl = transformImageUrl(siteData?.logo?.url)
   const siteName = siteData?.siteName || 'Website'
+  const backgroundImageUrl = siteData?.backgroundImage?.url
+  ? getImagePath(transformImageUrl(siteData.backgroundImage.url))
+  : '/background1.svg' // fallback
 
   // Split site name into two lines if needed
   const nameWords = siteName.split(' ')
@@ -82,7 +85,7 @@ const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children }) => {
       style={{
         // backgroundColor: 'var(--background)',
         color: 'var(--text)',
-        backgroundImage: 'url("/background1.svg")',
+        backgroundImage: `url("${backgroundImageUrl}")`,
         backgroundAttachment: 'fixed',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',

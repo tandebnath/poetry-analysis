@@ -342,6 +342,10 @@ export interface Home {
 export interface WebsiteSetting {
   id: number;
   siteName: string;
+  /**
+   * Optional site-wide background image (e.g., SVG or JPG)
+   */
+  backgroundImage?: (number | null) | Media;
   logo?: (number | null) | Media;
   updatedAt: string;
   createdAt: string;
@@ -627,6 +631,7 @@ export interface HomeSelect<T extends boolean = true> {
  */
 export interface WebsiteSettingsSelect<T extends boolean = true> {
   siteName?: T;
+  backgroundImage?: T;
   logo?: T;
   updatedAt?: T;
   createdAt?: T;

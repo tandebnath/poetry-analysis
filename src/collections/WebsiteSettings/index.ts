@@ -22,6 +22,16 @@ const WebsiteSettings: CollectionConfig = {
       required: true,
     },
     {
+      name: 'backgroundImage',
+      label: 'Background Image',
+      type: 'upload',
+      relationTo: 'media',
+      required: false,
+      admin: {
+        description: 'Optional site-wide background image (e.g., SVG or JPG)',
+      },
+    },
+    {
       name: 'logo',
       label: 'Logo',
       type: 'upload',
