@@ -1,13 +1,7 @@
 # Unbiased AI for Poetry Analysis
 ---
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7.3-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)  
-[![React](https://img.shields.io/badge/React-19.0.0-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactjs.org/)  
-[![Next.js](https://img.shields.io/badge/Next.js-15.1.5-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)  
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.3-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)  
-[![Payload CMS](https://img.shields.io/badge/Payload_CMS-latest-000000?style=flat&logo=payloadcms&logoColor=white)](https://payloadcms.com/)  
-[![SQLite](https://img.shields.io/badge/SQLite-5.1.7-07405E?style=flat&logo=sqlite&logoColor=white)](https://www.sqlite.org/index.html)  
-[![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub_Pages-222222?style=flat&logo=github&logoColor=white)](https://pages.github.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7.3-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) [![React](https://img.shields.io/badge/React-19.0.0-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactjs.org/) [![Next.js](https://img.shields.io/badge/Next.js-15.1.5-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/) [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.3-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) [![Payload CMS](https://img.shields.io/badge/Payload_CMS-latest-000000?style=flat&logo=payloadcms&logoColor=white)](https://payloadcms.com/) [![SQLite](https://img.shields.io/badge/SQLite-5.1.7-07405E?style=flat&logo=sqlite&logoColor=white)](https://www.sqlite.org/index.html) [![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub_Pages-222222?style=flat&logo=github&logoColor=white)](https://pages.github.com/)
 
 ## Overview
 
